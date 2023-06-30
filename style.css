@@ -131,7 +131,7 @@ button.white
     display: none;
     align-items: center;
 }
-#shop
+#shop, #main-shop
 {
     width: 30px;
     height: 30px;
@@ -829,6 +829,248 @@ footer .copyright
     border-radius: 20px;
 }
 
+/* Contact page  */
+#contact-details
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#contact-details .details
+{
+    width: 40%;
+}
+#contact-details .details span, #form-details form span
+{
+    font-size: 12px;
+}
+#contact-details .details h2,
+#form-details form h2{
+    font-size: 26px;
+    line-height: 35px;
+    padding: 25px 0;
+}
+#contact-details .details h3{
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+#contact-details .details li
+{
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+#contact-details .details li i{
+    font-size: 14px;
+    padding-right: 22px;
+}
+#contact-details .details li p
+{
+    margin: 0;
+    font-size: 14px;
+}
+.contact-details .map
+{
+    width: 55%;
+    height: 400px;
+}
+.contact-details .map iframe
+{
+    width: 100%;
+    height: 100%;
+}
+#form-details
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+
+}
+#form-details form
+{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#form-details form input,textarea
+{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+#form-details form button
+{
+    background-color: #088178;
+    color: #fff;
+}
+
+#form-details .people p
+{
+    color: #222;
+}
+#form-details .people div
+{
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#form-details .people div img
+{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+#form-details .people div p
+{
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+}
+#form-details .people div p span
+{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* Cart Page */
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+#cart table img
+{
+    width: 70px;
+}
+#cart table .cancel
+{
+    width: 20px
+}
+#cart table td:nth-child(1)
+{
+    width: 100px;
+    text-align: center;
+}
+#cart table td:nth-child(2)
+{
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(3)
+{
+    width: 250px;
+    text-align: center;
+}
+#cart table td:nth-child(4), #cart table td:nth-child(5), #cart table td:nth-child(6)
+{
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(5) input
+{
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+#cart table thead
+{
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+#cart table thead td
+{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+#cart table tbody tr td
+{
+    padding-top: 15px;
+}
+#cart table tbody td
+{
+    font-size: 13px;
+}
+#cart-add
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#cart-add .coupon{
+    width: 50%;
+    margin-bottom: 30px;
+}
+/* #cart-add .coupon h3
+{
+    padding-bottom: 15px;
+} */
+#cart-add .coupon input
+{
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+}
+#cart-add .coupon button
+{
+    background-color: #088178;
+    color: #fff;
+    padding: 12px 20px;
+}
+#subtotal
+{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+#subtotal table
+{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#subtotal table td
+{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+}
+#cart-add .coupon , #subtotal h3
+{
+    padding: 15px;
+}
+#subtotal button
+{
+    background-color: #088178;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* Media Query */
 /* i-pad/tablet */
@@ -873,9 +1115,13 @@ footer .copyright
     }
     #shop
     {
-        display: none;
+        display: flex;
         width: 50px;
         height: 50px;
+    }
+    #main-shop
+    {
+        display: none;
     }
     #close
     {
@@ -944,6 +1190,42 @@ footer .copyright
         width: 70%;
         height: auto;
         margin-bottom: 40px;
+    }
+    /* contact page */
+    #contact-details {
+        padding: 0;
+        width: 80%;
+        align-items: center;
+        margin: 20px 40px;
+        margin-left: 80px;
+    }
+    #contact-details .details {
+        width: 50%;
+    }
+    iframe {
+        width: 400px;
+        height: 450px;
+    }
+    #shop-hero {
+        height: 30vh;
+    }
+    /* #form-details {
+        width: 80%;
+        align-items: center;
+    }
+    #form-details form {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    } */
+    #form-details .people{
+        width: 70%;
+        height: 40%;
+        align-items: center;
+        justify-content: center;
+        padding-left: 60px;
+        padding-top: 50px;
     }
 }
 
@@ -1064,6 +1346,40 @@ footer .copyright
         width: 80%;
         height: auto;
         align-items: center;
-        margin-left: 40px;
+        margin-left: 0px;
     }
+    /* contact page */
+    #contact-details {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #contact-details .details {
+        width:60%;
+        margin-right: 80px;
+    }
+    #form-details {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 5px;
+        padding-top: 30px;
+        align-items: center;
+    }
+    #form-details .people {
+        margin-left: -100px;
+    }
+    #form-details form button {
+        margin-left: 50px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    #contact-details .map iframe {
+        width: 390px;
+        height: 350px;
+        margin-top: 30px;
+        margin-left: -80px;
+    }
+
 }
