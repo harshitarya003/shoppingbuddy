@@ -163,6 +163,12 @@ button.white
 {
     color: #088178;
 }
+#hero p
+{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0px 20px 0px;
+}
 #hero button
 {
     background-image: url(img/button.png);
@@ -556,7 +562,9 @@ footer h4
 footer p
 {
     font-size: 13px;
-    margin-left: 8px;
+    color: #000;
+    margin: 0;
+    margin: 7px 0;
 }
 footer a
 {
@@ -591,8 +599,192 @@ footer .copyright
     width:100%;
     text-align: center;
 }
+
+/* Shop */
+#shop-hero
+{
+    background-image: url("img/banner/b1.jpg");
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+#shop-hero h2,p
+{
+    color: #fff;
+}
+#paging
+{
+    text-align: center;
+    font-size: 15px;
+}
+#paging a
+{
+    text-decoration: none;
+    color: #fff;
+    background-color: #088178;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px 20px;
+    border-radius: 6px;
+}
+#paging .change-my-color {
+    filter: invert(100%);
+}
+#paging img
+{
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    margin-bottom: -10px;
+    font-weight: 700;
+}
+#prodetails
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+#prodetails .main-image
+{
+    width: 40%;
+    margin-right: 50px;
+}
+#prodetails .side-img
+{
+    display: flex;
+    justify-content: space-between;
+}
+#prodetails .side-img-col
+{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+#prodetails .pro-desc
+{
+    width:50%;
+    padding: 30px;
+}
+#prodetails .pro-desc h4
+{
+    padding: 40px 0 20px 0;
+}
+#prodetails .pro-desc h2
+{
+    font-size: 26px;
+}
+#prodetails .pro-desc select
+{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+#prodetails .pro-desc input
+{
+    width: 50px;
+    height: 47px;
+    font-size: 16px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+#prodetails .pro-desc input:focus
+{
+    outline: none;
+}
+#prodetails .pro-desc button
+{
+    height: 47px;
+}
+#prodetails .pro-desc button
+{
+    color: #fff;
+    background-color: #088178;
+}
+#prodetails .pro-desc span
+{
+    line-height: 25px;
+}
+
+/* blog page */
+#shop-hero.blog-header
+{
+    background-image: url(img/banner/b19.jpg);
+}
+#blog
+{
+    margin: 150px;
+    margin-bottom: 0;
+}
+#blog .blog-box
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-bottom: 90px;
+}
+#blog p{
+    color: #818ea0;
+
+}
+#blog .blog-img
+{
+    margin-right: 40px;
+    width: 50%;
+}
+#blog .blog-details
+{
+    width: 50%;
+}
+#blog .blog-img img
+{
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+#blog .blog-details a
+{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+    transition: 0.2s ease;
+}
+#blog .blog-details a::after
+{
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 12px;
+    right: -60px;
+}
+#blog .blog-details a:hover
+{
+    color: #088178;
+}
+#blog .blog-details a:hover::after
+{
+    background-color: #088178;
+}
+#blog h1
+{
+    position: absolute;
+    top: -40px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color: #c9cbce;
+    z-index: -1;
+}
+
 /* Media Query */
-/* i-pad */
+/* i-pad/tablet */
 @media (max-width:799px) {
     #navbar {
         display: flex;
@@ -690,7 +882,12 @@ footer .copyright
     #newsletter .form {
         width: 70%;
     }
+    footer p
+    {
+        color: #222;
+    }
 }
+
 /* phone */
 @media (max-width: 477px) {
     #header {
@@ -766,5 +963,32 @@ footer .copyright
     {
         margin: 10px 0px;
         margin-right: 10px;
+    }
+    /* product */
+    #shop-hero {
+        width: 100%;
+        height: 20vh;
+    }
+    #prodetails {
+        display: flex;
+        flex-direction: column;
+    }
+    #prodetails .main-image, .pro-desc
+    {
+        width: 100%;
+        margin-right: 0;
+    }
+    /* blog page */
+    #blog
+    {
+        margin: 40px;
+    }
+    #blog .blog-box
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-bottom: 100px;
     }
 }
